@@ -1,4 +1,9 @@
-# gtaweb
+# [gtaweb](https://zeozeozeo.github.io/gtaweb/)
+
+## [Open in browser!](https://zeozeozeo.github.io/gtaweb/)
+
+> [!NOTE]
+> Your adblocker may block the ingame ads, make sure to disable it.
 
 A conversion of GTA IV's internet into HTML. It works by parsing the .whm files and reconstructing the layout into HTML. WHM is quite similar to HTML, except stored in binary together with the DXT-compressed textures and zlib compressed. The DXT textures are decompressed and converted to PNG thanks to the library [mauserzjeh/dxt](https://github.com/mauserzjeh/dxt).
 

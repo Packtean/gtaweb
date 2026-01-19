@@ -110,7 +110,7 @@ func generateRootIndex() error {
         </div>
 
         <div class="footer">
-            Converted from WHM format to HTML
+            Note: your adblocker may block the ingame ads, make sure to disable it.
         </div>
     </div>
 </body>
@@ -269,7 +269,7 @@ func generateIVIndex() error {
 	html.WriteString(`        </ul>
 
         <div class="footer">
-            These websites were extracted from GTA IV and converted to HTML format
+            These websites were extracted from GTA IV and converted to HTML format. Note: your adblocker may block the ingame ads, make sure to disable it.
         </div>
     </div>
 </body>
