@@ -186,7 +186,7 @@ func getAttributesWithContext(node *HtmlNode, currentSite string) string {
 		if rs.BackgroundImageOffset == 0 {
 			styleAttrs["background-color"] = getColor(rs.BackgroundColor)
 		} else if rs.BackgroundImageName != "" {
-			styleAttrs["background-image"] = fmt.Sprintf("url(%s.png)", rs.BackgroundImageName)
+			styleAttrs["background-image"] = fmt.Sprintf("url(%s.png)", strings.ToLower(rs.BackgroundImageName))
 			styleAttrs["background-repeat"] = getAttributeValue(rs.BackgroundRepeat)
 		}
 	}
@@ -360,7 +360,7 @@ func getAttributesWithContext(node *HtmlNode, currentSite string) string {
 				}
 			}
 
-			attrs["href"] = link
+			attrs["href"] = strings.ToLower(link)
 		} else {
 			attrs["href"] = "#"
 		}
@@ -371,7 +371,7 @@ func getAttributesWithContext(node *HtmlNode, currentSite string) string {
 			if idx := strings.LastIndex(path, "."); idx != -1 {
 				path = path[:idx]
 			}
-			attrs["src"] = path + ".png"
+			attrs["src"] = strings.ToLower(path) + ".png"
 		}
 	}
 
