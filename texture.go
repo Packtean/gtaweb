@@ -8,7 +8,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/mauserzjeh/dxt"
+	"github.com/zeozeozeo/dxt"
 )
 
 // D3DFormat represents DirectX texture formats

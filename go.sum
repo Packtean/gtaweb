@@ -1,8 +1,10 @@
-github.com/mauserzjeh/dxt v1.0.0 h1:5Qb1aqvdYGAKzQuZQ3lJGKzUje2WswXNvaZkWd0NqG0=
-github.com/mauserzjeh/dxt v1.0.0/go.mod h1:Ulty8+/KXIxoS/sOspJ2z/aPdsXnDH+sCWdZHQSD51k=
 github.com/tdewolff/minify/v2 v2.24.8 h1:58/VjsbevI4d5FGV0ZSuBrHMSSkH4MCH0sIz/eKIauE=
 github.com/tdewolff/minify/v2 v2.24.8/go.mod h1:0Ukj0CRpo/sW/nd8uZ4ccXaV1rEVIWA3dj8U7+Shhfw=
 github.com/tdewolff/parse/v2 v2.8.5 h1:ZmBiA/8Do5Rpk7bDye0jbbDUpXXbCdc3iah4VeUvwYU=
 github.com/tdewolff/parse/v2 v2.8.5/go.mod h1:Hwlni2tiVNKyzR1o6nUs4FOF07URA+JLBLd6dlIXYqo=
 github.com/tdewolff/test v1.0.11 h1:FdLbwQVHxqG16SlkGveC0JVyrJN62COWTRyUFzfbtBE=
 github.com/tdewolff/test v1.0.11/go.mod h1:XPuWBzvdUzhCuxWO1ojpXsyzsA5bFoS3tO/Q3kFuTG8=
+github.com/zeozeozeo/dxt v0.0.0-20260119184838-c5fe17528de3 h1:6xOthGQgBxo7mVQ78om4XqqJc5u315gc3011gNMhsJY=
+github.com/zeozeozeo/dxt v0.0.0-20260119184838-c5fe17528de3/go.mod h1:jyp1NOFePmXBkL/T5O7Xh9fwfSbho6RkLfzVStf3e3c=
+github.com/zeozeozeo/dxt v0.0.0-20260119185621-f47a38b8bbfc h1:hAULLavJW4QlMRoxk+WLuq3sLn0YIsoFngUIFZfY/JU=
+github.com/zeozeozeo/dxt v0.0.0-20260119185621-f47a38b8bbfc/go.mod h1:jyp1NOFePmXBkL/T5O7Xh9fwfSbho6RkLfzVStf3e3c=
