@@ -1,0 +1,4 @@
+# get this from pc/html in the game directory
+html/
+# decompile common/text/american.gxt with OpenIV
+american.txt
