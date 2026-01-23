@@ -9,12 +9,12 @@ import (
 	"strings"
 )
 
-// GenerateIndexes generates both root and IV index pages
-func GenerateIndexes() error {
+// GenerateIndexes generates root, IV or V index.html pages
+func GenerateIndexes(iv bool) error {
 	if err := generateRootIndex(); err != nil {
 		return fmt.Errorf("error generating root index: %w", err)
 	}
-	if err := generateIVIndex(); err != nil {
+	if err := generateIndex(iv); err != nil {
 		return fmt.Errorf("error generating IV index: %w", err)
 	}
 
@@ -106,7 +106,11 @@ func generateRootIndex() error {
             <a href="iv/index.html" class="game-card">
                 <div class="game-title">Grand Theft Auto IV</div>
                 <div class="game-description">Browse the websites from Liberty City</div>
-            </a
+            </a>
+            <a href="v/index.html" class="game-card">
+                <div class="game-title">Grand Theft Auto V</div>
+                <div class="game-description">Browse the websites from Los Santos (WIP)</div>
+            </a>
         </div>
 
         <div class="footer">
@@ -119,9 +123,14 @@ func generateRootIndex() error {
 	return os.WriteFile("index.html", []byte(html), 0644)
 }
 
-func generateIVIndex() error {
+func generateIndex(iv bool) error {
+	dirName := "iv"
+	if !iv {
+		dirName = "v"
+	}
+
 	var sites []string
-	err := filepath.WalkDir("iv", func(path string, d fs.DirEntry, err error) error {
+	err := filepath.WalkDir(dirName, func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
@@ -130,7 +139,7 @@ func generateIVIndex() error {
 			return nil
 		}
 
-		relPath, _ := filepath.Rel("iv", path)
+		relPath, _ := filepath.Rel(dirName, path)
 		if strings.HasPrefix(d.Name(), "www.") && !strings.Contains(relPath, string(filepath.Separator)) {
 			sites = append(sites, d.Name())
 		}
@@ -144,13 +153,19 @@ func generateIVIndex() error {
 
 	sort.Strings(sites)
 
+	cityName := "Libery City"
+	if !iv {
+		cityName = "Los Santos"
+	}
+	game := strings.ToUpper(dirName)
+
 	var html strings.Builder
-	html.WriteString(`<!DOCTYPE html>
+	fmt.Fprintf(&html, `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTA IV - Website Directory</title>
+    <title>GTA %s - Website Directory</title>
     <style>
         @font-face {
             font-family: 'DIN Medium';
@@ -246,9 +261,9 @@ func generateIVIndex() error {
 </head>
 <body>
     <div class="container">
-        <h1>GTA IV Websites</h1>
-        <p class="subtitle">Liberty City's Internet Archive</p>
-        <div class="count">`)
+        <h1>GTA %s Websites</h1>
+        <p class="subtitle">%s's Internet Archive</p>
+        <div class="count">`, game, game, cityName)
 	fmt.Fprintf(&html, "%d websites available", len(sites))
 	html.WriteString(`</div>
         <br>
@@ -266,15 +281,15 @@ func generateIVIndex() error {
 `, indexPath, displayName)
 	}
 
-	html.WriteString(`        </ul>
+	fmt.Fprintf(&html, `        </ul>
 
         <div class="footer">
-            These websites were extracted from GTA IV and converted to HTML format. Note: your adblocker may block the ingame ads, make sure to disable it.
+            These websites were extracted from GTA %s and converted to HTML format. Note: your adblocker may block the ingame ads, make sure to disable it.
         </div>
     </div>
 </body>
 </html>
-`)
+`, game)
 
-	return os.WriteFile("iv/index.html", []byte(html.String()), 0644)
+	return os.WriteFile(fmt.Sprintf("%s/index.html", dirName), []byte(html.String()), 0644)
 }

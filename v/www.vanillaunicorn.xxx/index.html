@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vanillaunicorn.xxx</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            background-color: #000;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #ruffle-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        #ruffle-embed {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            z-index: 10;
+        }
+    </style>
+    <script src="../ruffle/ruffle.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="loading">
+            <div class="spinner"></div>
+            <p>Loading vanillaunicorn.xxx...</p>
+        </div>
+        <div id="ruffle-container">
+            <embed
+                id="ruffle-embed"
+                src="www_vanillaunicorn_xxx.swf"
+                width="100%"
+                height="100%"
+                type="application/x-shockwave-flash"
+                allowfullscreen="true"
+                quality="high"
+                bgcolor="#000000"
+                wmode="direct"
+            />
+        </div>
+    </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = {
+            autoplay: "on",
+            unmuteOverlay: "hidden",
+            logLevel: "error",
+            letterbox: "on",
+            scale: "showAll",
+            warnOnUnsupportedContent: false,
+            contextMenu: "off",
+            base: "/v/"
+        };
+
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loader = document.getElementById('loading');
+                if (loader) loader.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Extract scaleform_web from corresponding rpf files
+
+# update - Copy.rpf
+update_copy_scaleform_web/
+# update.rpf
+update_scaleform_web/
+# x64b.rpf
+x64b_scaleform_web/
+
+# gfxfontlib.gfx from some rpf file too (use search)
+gfxfontlib.gfx
+
+# for now
+*/**.png
